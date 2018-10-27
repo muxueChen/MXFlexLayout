@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PC端注册模块演示</title>
+		<style type="text/css">
+			.flex-reg{
+				background: #E6E6FA;
+				padding: 20px;
+				height: 300px;
+				list-style: none;
+				border-radius: 10px;
+				width: 30%;
+				min-width: 320px;
+				margin: 0 auto;
+				display: flex;
+				flex-flow: column;
+				justify-content: space-between;
+			}
+			.flex-reg li{
+				/*border: 1px red solid;*/
+				display: flex;
+				align-items: center;
+			}
+			.flex-reg li i{
+				width: 100px;
+				background: lemonchiffon;
+				font-style: normal;
+				text-align: right;
+				white-space: nowrap;
+			}
+			.flex-reg li input{
+				flex: 1;
+				height: 48px;
+			}
+			.flex-reg li button{
+				flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			1、容器自适应宽：%；
+			2、子项的主要列需要跟随容器自适应
+			3、子项能在垂直方向延展占满容器（可选）
+		-->
+		<form action="">
+			<ul class="flex-reg">
+				<li>
+					<i>账号：</i>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<i>密码：</i>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<i>确认密码：</i>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<i>手机号：</i>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<button type="submit">立即注册</button>
+				</li>
+
+			</ul>
+		</form>
+	</body>
+</html>

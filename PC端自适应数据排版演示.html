@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PC端自适应数据排版演示</title>
+		<style type="text/css">
+			div{
+				box-sizing: border-box;
+				width: 400px;
+				/*height: 350px;*/
+				padding: 15px;
+				border: 1px #CCCCCC solid;
+				border-radius: 5px;
+				margin: 0 auto;
+				display: flex;
+				flex-flow: wrap;
+				align-items: flex-start;		/*针对单行情况的操作*/
+				align-content:flex-start;		/*针对多行情况的操作*/
+				justify-content: space-between;
+				resize: auto;
+				overflow: auto;
+			}
+			div>a{
+				line-height: 48px;
+				text-decoration: none;
+				background: lightblue;
+				padding:0 15px;
+				margin: 2px;
+				flex: 1;
+				/*下面2句都是需要你考虑到多种数据出现的情况的一些设定*/
+				white-space: nowrap;
+				text-align: center;
+			}
+			div>a:last-child{
+				flex: none;
+				background: palevioletred;
+				order: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-tag">
+			<a href="">2个字</a>
+			<a href="">你好</a>
+			<a href="">你是谁</a>
+			<a href="">我很想睡觉</a>
+			<a href="">额..</a>
+			<a href="">啊</a>
+			<a href="">哈哈哈哈</a>
+			<a href="">呵呵呵呵嗯哼和</a>
+			<a href="">2个字</a>
+			<a href="">你好</a>
+			<a href="">你是谁</a>
+			<a href="">我很想睡觉</a>
+			<a href="">额..</a>
+			<a href="">啊</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>移动端小模块演示</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.flexbox1{
+				list-style: none;
+				padding: 10px;
+			}
+			.flexbox1 li{
+				color: #363636;
+				display: flex;
+				border-bottom: 1px #ccc solid;
+				padding: 10px 0;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+			.flexbox1 li i{
+				width: 64px;
+				height: 64px;
+				background: lightcoral;
+				margin-right: 10px;
+			}
+			.flexbox1 li div{
+				flex: 1;	/*基于此对象没有基准的尺寸*/
+			}
+			.flexbox1 li h3{
+				font-size: 28px;
+				font-weight: normal;
+			}
+			.flexbox1 li p {
+				font-size: 20px;
+				color: #666666;
+			}
+			.flexbox1 li a{
+				padding-left: 10px;
+				align-self: center;
+			}
+			
+			
+			.flex-tab{
+				padding: 10px;
+				background: #EEEEEE;
+				color: red;
+				display: flex;
+				overflow-x: scroll;
+			}
+			.flex-tab a{
+				text-align: center;
+				flex: 1;
+				white-space: nowrap;	/*防止文本换行*/
+				padding: 0 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>常见的flex列表</h1>
+		<ul class="flexbox1">
+			<li>
+				<i class="icon"></i>
+				<div>
+					<h3>title here</h3>
+					<p>decription here...text more</p>
+				</div>
+				<a href="">click</a>
+			</li>
+			<li>
+				<i class="icon"></i>
+				<div>
+					<h3>title here</h3>
+					<p>decription here...text more</p>
+				</div>
+				<a href="">click</a>
+			</li>
+			<li>
+				<i class="icon"></i>
+				<div>
+					<h3>title here</h3>
+					<p>decription here...text more</p>
+				</div>
+				<a href="">click</a>
+			</li>
+			<li>
+				<i class="icon"></i>
+				<div>
+					<h3>title here</h3>
+					<p>decription here...text more</p>
+				</div>
+				<a href="">click</a>
+			</li>
+		</ul>
+		<h1>常见的tab选项卡</h1>
+		<div class="flex-tab">
+			<a href="">话题</a>
+			<a href="">精选</a>
+			<a href="">朋友圈</a>
+			<a href="">话题</a>
+			<a href="">精选</a>
+			<a href="">朋友圈</a>
+			<a href="">话题</a>
+			<a href="">精选</a>
+			<a href="">朋友圈</a>			
+		</div>
+	</body>
+</html>

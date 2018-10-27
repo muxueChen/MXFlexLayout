@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子项属性演示</title>
+		<style type="text/css">
+			.flex{
+				border: 1px black solid;
+				display: flex;
+			}
+			.grow{
+				width: 500px;
+				flex-wrap: wrap;
+			}
+			.grow span{
+				width: 300px;
+				height: 200px;
+				background: lightblue;
+				flex-grow: 0;	/*默认不扩展*/
+				flex-grow: 1;
+			}
+			.grow span:nth-child(even){
+				background: deeppink;
+				width: 100px;
+			}
+			
+			.shrink{
+				width: 600px;
+			}
+			.shrink span{
+				width: 250px;
+				background: lightblue;
+			}
+			.shrink span:nth-child(even){
+				background: pink;
+				flex-shrink: 0;
+			}
+			.basis{
+				width: 900px;
+				flex-direction: column;
+			}
+			.basis span{
+				width: 250px;
+				height: 500px;
+				/*flex-basis: auto;*/
+				flex-basis: 100px;	/*basis可以看作是在flex布局当中的子项width或height,具体替代哪一个由主轴方向来决定*/
+				background: lightblue;
+			}
+			.basis span:nth-child(even){
+				background: pink;
+			}			
+		</style>
+	</head>
+	<body>
+		<div class="flex grow">
+			<span>1.5</span>
+			<span>3</span>
+			<span>1.5</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+		<div class="flex shrink">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		<div class="flex basis">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>			
+	</body>
+</html>

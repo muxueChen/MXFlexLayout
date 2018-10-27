@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子项flex属性的多种值演示</title>
+		<style type="text/css">
+			div{
+				border: 1px black solid;
+				width: 800px;
+				height: 300px;
+				margin: 0 auto;
+				display: flex;
+			}
+			div>span{
+				background: lightblue;
+				width: 200px;
+				margin: 10px;
+				/*flex: 0 1 auto;	默认值:等于没写*/				
+				/*flex: 0 1 200px;    基础写法:3个值顺着写(初学的思路)*/
+				
+				/*flex的快捷值(直接针对常用需求而定)*/
+				/*flex: none;		需求:不扩展不收缩的需求,等同于flex:0 0 auto*/
+				/*flex: auto;			需求:可扩展可收缩的需求,等同于flex:1 1 auto*/
+				
+				/*值为比例值(纯数字)的写法*/
+				/* flex: 1;	比例值按顺序指定:1是grow,2是shrink。basis的值由默认auto变成0%  */
+				/*flex: 1 0;*/  
+				
+				/*值为尺寸值(basis的值)的写法*/
+				/*flex: 50px;	1.这里的尺寸值会覆盖原先可能已设定的尺寸   2.比例自动的修改为可扩展可收缩 */
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+	</body>
+</html>
